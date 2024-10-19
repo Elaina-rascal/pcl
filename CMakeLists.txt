@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.6)
+project(MY_GRAND_PROJECT)
+find_package(PCL 1.3 REQUIRED COMPONENTS common io)
+include_directories(${PCLINCLUDEDIRS})
+link_directories(${PCLLIBRARYDIRS})
+add_definitions(${PCLDEFINITIONS})
+add_executable(pcd_write_test test.cpp)
+target_link_libraries(pcd_write_test ${PCL_LIBRARIES})
