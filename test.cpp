@@ -1,6 +1,23 @@
+/**
+ * @file test.cpp
+ * @author your name (you@domain.com)
+ * @brief
+ * @version 0.1
+ * @date 2024-10-20
+ *
+ * @copyright Copyright (c) 2024
+ *
+ */
 #include <iostream>
 #include <pcl/io/pcd_io.h>
 #include <pcl/point_types.h>
+/**
+ * @brief 主函数
+ *
+ * @param argc
+ * @param argv
+ * @return int
+ */
 int main(int argc, char **argv) {
   pcl::PointCloud<pcl::PointXYZ> cloud;
   // Fill in the cloud data

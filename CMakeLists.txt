@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.6)
 project(MY_GRAND_PROJECT)
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 find_package(PCL 1.3 REQUIRED COMPONENTS common io)
 include_directories(${PCLINCLUDEDIRS})
 link_directories(${PCLLIBRARYDIRS})
