@@ -18,7 +18,7 @@
 int main(int argc, char **argv)
 {
     using namespace std;
-    unique_ptr<pcl::PointCloud<pcl::PointXYZ>> cloud_ptr;
+    shared_ptr<pcl::PointCloud<pcl::PointXYZ>> cloud_ptr;
     cloud_ptr.reset(new pcl::PointCloud<pcl::PointXYZ>);
     // Fill in the cloud data
     if (pcl::io::loadPCDFile(
