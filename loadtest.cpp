@@ -8,7 +8,6 @@
  * @copyright Copyright (c) 2024
  *
  */
-
 #include "fmt/core.h"
 #include "pcl/io/pcd_io.h"
 #include <filesystem>
@@ -39,9 +38,10 @@ int main(int argc, char **argv)
         pcl::getMinMax3D(*cloud_ptr, min_pt, max_pt);
 
         // 创建索引并提取点云
-        vector<int> index = {0, 2, 4, 5};
+        // vector<int> index = {0, 2, 4, 5};
         unique_ptr<pcl::PointCloud<pcl::PointXYZ>> cloud_filtered_ptr =
             make_unique<pcl::PointCloud<pcl::PointXYZ>>();
-        pcl::copyPointCloud(*cloud_ptr, index, *cloud_filtered_ptr);
+        pcl::copyPointCloud(*cloud_ptr, vector<int>{0, 2, 4, 5}, *cloud_filtered_ptr);
+        auto index = cloud_filtered_ptr->begin();
     }
 }
